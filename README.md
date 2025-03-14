@@ -1,10 +1,10 @@
 # 📚 News Aggregator for The Future Business Teachers' Organization
 ## Powered by Mapúan Students & FBTO
-Medina, Art Gabriel Luces - Documentation
-Pasion, John Carlo - Documentation
-Samonte, Adriel Denzel A. - 
-Tambagan, Enrick Alfonso D. - Frontend & UI/UX Designer
-Taningco, Kurt Andrei C. - Documentation
+- Medina, Art Gabriel Luces - Documentation
+- Pasion, John Carlo - Documentation
+- Samonte, Adriel Denzel A. - Backend & API Developer
+- Tambagan, Enrick Alfonso D. - Frontend & UI/UX Designer
+- Taningco, Kurt Andrei C. - Documentation
 
 Client: Nicko Barro (President of Future Business Teachers Organization)
 
