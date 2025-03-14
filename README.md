@@ -14,6 +14,15 @@ The overwhelming volume of news content across various topics makes it challengi
 - Include a bookmarking feature for users to save articles for later reading.
 - Create a user-friendly interface for easy navigation and interaction.
 
+## 🌈 Dashboard Personalization Features
+Users can put a personalized touch on their dashboard with the following decorative options:
+- **Change Dashboard Color:** Users can select their preferred color scheme for the dashboard, allowing for a more personalized and visually appealing experience.
+- **Custom Background Images:** Users can upload or select from a gallery of background images to enhance the aesthetic of their dashboard.
+- **Font Style Selection:** Users can choose from a variety of font styles for headings and body text to match their personal taste.
+- **Widget Arrangement:** Users can rearrange dashboard widgets (e.g., news categories, bookmarks, and notifications) to prioritize the information they find most important.
+- **Theme Selection:** Users can choose from predefined themes (e.g., light mode, dark mode, or colorful themes) to suit their mood or preference.
+- **Personalized Greetings:** Users can set a custom greeting message that appears on their dashboard, adding a personal touch to their experience.
+
 ## 🌍 UN SDGs Addressed
 This project addresses 15 of the 17 United Nations Sustainable Development Goals (SDGs) by promoting awareness on various topics, including:
 1. No Poverty
