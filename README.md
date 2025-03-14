@@ -24,6 +24,31 @@
 - Admin interface
 - Profile management
 
+## 🛠️ REST API
+The project includes a REST API that allows for programmatic access to various functionalities. Key endpoints include:
+- **User Registration:**
+  - `POST /api.php?action=register`: Register a new user with the following JSON body:
+    ```json
+    {
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "john.doe@example.com",
+      "gender": "male",
+      "birthday": "1990-01-01",
+      "password": "yourpassword"
+    }
+    ```
+- **User Login:**
+  - `POST /api.php?action=login`: Authenticate a user with the following JSON body:
+    ```json
+    {
+      "email": "john.doe@example.com",
+      "password": "yourpassword"
+    }
+    ```
+- **Get Users:**
+  - `GET /api.php?action=getUsers`: Retrieve a list of users (id, firstname, lastname, email).
+
 ## 🎯 Suggested Adaptation for The Future Business Teachers' Organization
 
 ### 📅 Content Focus Redesign
