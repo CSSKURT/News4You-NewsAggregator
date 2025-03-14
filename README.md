@@ -59,156 +59,26 @@ This project addresses 15 of the 17 United Nations Sustainable Development Goals
 ## 🛠️ REST API
 The project includes a REST API that allows for programmatic access to various functionalities, enabling a personalized news experience for users. The API facilitates user interactions with the news aggregator by allowing them to set preferences, retrieve tailored content, and manage their accounts. Key endpoints include:
 
-### User Authentication
-- **User Registration:**
-  - **Endpoint:** `POST /api.php?action=register`
-  - **Description:** Registers a new user with the following JSON body:
-    ```json
-    {
-      "firstname": "John",
-      "lastname": "Doe",
-      "email": "john.doe@example.com",
-      "gender": "male",
-      "birthday": "1990-01-01",
-      "password": "yourpassword"
-    }
-    ```
-  - **Functionality:** Creates a new user account and stores user information in the database.
 
-- **User Login:**
-  - **Endpoint:** `POST /api.php?action=login`
-  - **Description:** Authenticates a user with the following JSON body:
-    ```json
-    {
-      "email": "john.doe@example.com",
-      "password": "yourpassword"
-    }
-    ```
-  - **Functionality:** Validates user credentials and returns a session token for authenticated requests.
+### 1. User Authentication and Management
+- **User Registration and Login:**
+  - **File:** `api.php`
+  - **Functionality:** This file handles user registration and login requests. It allows users to create accounts and authenticate themselves using their email and password. Upon successful login, a session is initiated, enabling users to access personalized features.
 
-### User Preferences
-- **Set User Preferences:**
-  - **Endpoint:** `POST /api.php?action=setPreferences`
-  - **Description:** Allows users to specify their news preferences (e.g., topics of interest such as local, international, sports, and entertainment).
-  - **Functionality:** Saves user preferences in the database, which will be used to filter news articles.
+### 2. Article Management
+- **Save Article:**
+  - **File:** `save_article.php`
+  - **Functionality:** This script allows logged-in users to save articles they find interesting. When a user submits an article to be saved, the script retrieves the user's ID from the session and inserts the article details (title, URL, published date, and description) into the `saved_articles` table in the database. After saving, the user is redirected back to their profile page with a success message.
 
-- **Get User Preferences:**
-  - **Endpoint:** `GET /api.php?action=getPreferences`
-  - **Description:** Retrieves the current preferences set by the user.
-  - **Functionality:** Returns the user's preferences to customize the news feed.
+- **Unsave Article:**
+  - **File:** `unsave_article.php`
+  - **Functionality:** This script enables users to remove articles from their saved list. It checks if the user is logged in and retrieves their ID. If an article ID is provided, the script deletes the corresponding entry from the `saved_articles` table, allowing users to manage their saved content effectively. A success or error message is displayed based on the outcome.
 
-### Personalized News Retrieval
-- **Get Personalized News:**
-  - **Endpoint:** `GET /api.php?action=getPersonalizedNews`
-  - **Description:** Fetches news articles based on the user's preferences.
-  - **Functionality:** Queries the News API using the user's specified topics and filters the results to return articles that match their interests. This ensures that users receive content that is relevant to them.
+### 3. News Retrieval
+- **Fetch News Articles:**
+  - **File:** `news_app.php`
+  - **Functionality:** This file is responsible for fetching news articles from the News API based on user-defined topics. Users can input a topic and choose a sorting preference (newest first or alphabetically). The script constructs a request to the News API, retrieves the articles, and displays them on the page. Users can also save articles directly from this interface.
 
-### Article Management
-- **Bookmark Articles:**
-  - **Endpoint:** `POST /api.php?action=bookmarkArticle`
-  - **Description:** Allows users to bookmark articles for later reading.
-  - **Functionality:** Saves the article ID to the user's bookmarks in the database.
-
-- **Get Bookmarked Articles:**
-  - **Endpoint:** `GET /api.php?action=getBookmarkedArticles`
-  - **Description:** Retrieves a list of articles that the user has bookmarked.
-  - **Functionality:** Returns the bookmarked articles for easy access.
-
-### Search Functionality
-- **Search Articles:**
-  - **Endpoint:** `GET /api.php?action=searchArticles`
-  - **Description:** Allows users to search for articles based on keywords.
-  - **Functionality:** Filters articles from the database or the News API based on the search query, providing users with relevant results.
-
-### User Profile Management
-- **Get User Profile:**
-  - **Endpoint:** `GET /api.php?action=getUserProfile`
-  - **Description:** Retrieves the user's profile information.
-  - **Functionality:** Returns user details, including preferences and bookmarked articles.
-
-- **Update User Profile:**
-  - **Endpoint:** `PUT /api.php?action=updateUserProfile`
-  - **Description:** Allows users to update their profile information.
-  - **Functionality:** Updates user details in the database, ensuring that their profile remains current.
-
-### Commenting System
-- **Add Comment:**
-  - **Endpoint:** `POST /api.php?action=addComment`
-  - **Description:** Allows users to add comments to articles.
-  - **Functionality:** Saves the comment associated with the article ID in the database.
-
-- **Get Comments:**
-  - **Endpoint:** `GET /api.php?action=getComments&id={articleId}`
-  - **Description:** Retrieves comments for a specific article.
-  - **Functionality:** Returns all comments associated with the specified article ID.
-
-### Notifications
-- **Get Notifications:**
-  - **Endpoint:** `GET /api.php?action=getNotifications`
-  - **Description:** Retrieves notifications for the user, such as new articles or comments on their posts.
-  - **Functionality:** Returns a list of notifications to keep users informed about relevant updates.
-
-### User Preferences
-- **Set User Preferences:**
-  - **Endpoint:** `POST /api.php?action=setPreferences`
-  - **Description:** Allows users to specify their news preferences (e.g., topics of interest such as local, international, sports, and entertainment).
-  - **Functionality:** Saves user preferences in the database, which will be used to filter news articles.
-
-- **Get User Preferences:**
-  - **Endpoint:** `GET /api.php?action=getPreferences`
-  - **Description:** Retrieves the current preferences set by the user.
-  - **Functionality:** Returns the user's preferences to customize the news feed.
-
-### Personalized News Retrieval
-- **Get Personalized News:**
-  - **Endpoint:** `GET /api.php?action=getPersonalizedNews`
-  - **Description:** Fetches news articles based on the user's preferences.
-  - **Functionality:** Queries the News API using the user's specified topics and filters the results to return articles that match their interests. This ensures that users receive content that is relevant to them.
-
-### Article Management
-- **Bookmark Articles:**
-  - **Endpoint:** `POST /api.php?action=bookmarkArticle`
-  - **Description:** Allows users to bookmark articles for later reading.
-  - **Functionality:** Saves the article ID to the user's bookmarks in the database.
-
-- **Get Bookmarked Articles:**
-  - **Endpoint:** `GET /api.php?action=getBookmarkedArticles`
-  - **Description:** Retrieves a list of articles that the user has bookmarked.
-  - **Functionality:** Returns the bookmarked articles for easy access.
-
-### Search Functionality
-- **Search Articles:**
-  - **Endpoint:** `GET /api.php?action=searchArticles`
-  - **Description:** Allows users to search for articles based on keywords.
-  - **Functionality:** Filters articles from the database or the News API based on the search query, providing users with relevant results.
-
-### User Profile Management
-- **Get User Profile:**
-  - **Endpoint:** `GET /api.php?action=getUserProfile`
-  - **Description:** Retrieves the user's profile information.
-  - **Functionality:** Returns user details, including preferences and bookmarked articles.
-
-- **Update User Profile:**
-  - **Endpoint:** `PUT /api.php?action=updateUserProfile`
-  - **Description:** Allows users to update their profile information.
-  - **Functionality:** Updates user details in the database, ensuring that their profile remains current.
-
-### Commenting System
-- **Add Comment:**
-  - **Endpoint:** `POST /api.php?action=addComment`
-  - **Description:** Allows users to add comments to articles.
-  - **Functionality:** Saves the comment associated with the article ID in the database.
-
-- **Get Comments:**
-  - **Endpoint:** `GET /api.php?action=getComments&id={articleId}`
-  - **Description:** Retrieves comments for a specific article.
-  - **Functionality:** Returns all comments associated with the specified article ID.
-
-### Notifications
-- **Get Notifications:**
-  - **Endpoint:** `GET /api.php?action=getNotifications`
-  - **Description:** Retrieves notifications for the user, such as new articles or comments on their posts.
-  - **Functionality:** Returns a list of notifications to keep users informed about relevant updates.
 
 ## 🎯 Suggested Adaptation for The Future Business Teachers' Organization
 
