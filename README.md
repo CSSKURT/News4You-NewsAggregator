@@ -1,4 +1,5 @@
 # 📚 News Aggregator for The Future Business Teachers' Organization
+## Powered by Mapúa & FBTO
 
 ## 🛠️ Core Functionality
 - Uses NewsAPI to fetch news articles
