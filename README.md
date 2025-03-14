@@ -3,8 +3,8 @@
 - Medina, Art Gabriel Luces - Documentation
 - Pasion, John Carlo - Documentation
 - Samonte, Adriel Denzel A. - Backend & API Developer
-- Tambagan, Enrick Alfonso D. - Frontend & UI/UX Designer
-- Taningco, Kurt Andrei C. - Documentation
+- Tambagan, Enrick Alfonso D. - Documentation
+- Taningco, Kurt Andrei C. - Frontend & UI/UX Designer
 
 Client: Nicko Barro (President of Future Business Teachers Organization)
 
