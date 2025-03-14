@@ -1,5 +1,12 @@
 # 📚 News Aggregator for The Future Business Teachers' Organization
-## Powered by Mapúa & FBTO
+## Powered by Mapúan Students & FBTO
+Medina, Art Gabriel Luces - Documentation
+Pasion, John Carlo - Documentation
+Samonte, Adriel Denzel A. - 
+Tambagan, Enrick Alfonso D. - Frontend & UI/UX Designer
+Taningco, Kurt Andrei C. - Documentation
+
+Client: Nicko Barro (President of Future Business Teachers Organization)
 
 ## 🛠️ Introduction
 The overwhelming volume of news content across various topics makes it challenging for users to track information relevant to their interests. The **Personalized News Aggregator** aims to help users filter and find news that aligns with their specific preferences, fostering awareness and engagement through a user-curated experience in partnership with the Future Business Teachers' Organization (FBTO).
